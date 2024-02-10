@@ -4157,7 +4157,8 @@ function ZX81(t, e, n, r) {
                         )
                     );
                 for (var u = "", r = 0; r < v.length; r++) v[r].loadedLen <= 0 && (u += v[r].fileName + ",");
-                return void (var statusLabel = document.getElementById("emulator_status"); statusLabel.innerHTML = "Failed to load required files: " + u.substr(0, u.length - 1));
+                var statusLabel = document.getElementById("emulator_status");
+                return void (statusLabel.innerHTML = "Failed to load required files: " + u.substr(0, u.length - 1));
             }
             var h = v[0].loadedLen;
             1 == zx81opts.chrgen && (h += v[1].loadedLen), (ROMTOP = h - 1), (memotechMode = 0);
