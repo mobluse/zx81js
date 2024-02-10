@@ -33,7 +33,7 @@ function ZX81EmulatorUI(t, e, n, r, i, o, a, c, u, f, y) {
         I = document.getElementById(e),
         P = document.getElementById(n),
         z = document.getElementById(r),
-        E = statusLabel = document.getElementById(i),
+        E = document.getElementById(i),
         L = document.getElementById(o),
         M = document.getElementById(a),
         U = document.getElementById(c),
@@ -4157,7 +4157,7 @@ function ZX81(t, e, n, r) {
                         )
                     );
                 for (var u = "", r = 0; r < v.length; r++) v[r].loadedLen <= 0 && (u += v[r].fileName + ",");
-                return void (statusLabel.innerHTML = "Failed to load required files: " + u.substr(0, u.length - 1));
+                return void (var statusLabel = document.getElementById("emulator_status"); statusLabel.innerHTML = "Failed to load required files: " + u.substr(0, u.length - 1));
             }
             var h = v[0].loadedLen;
             1 == zx81opts.chrgen && (h += v[1].loadedLen), (ROMTOP = h - 1), (memotechMode = 0);
