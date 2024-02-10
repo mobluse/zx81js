@@ -11,7 +11,7 @@
 var emulatorUI;
 window.onload = function()
   {
-  emulatorUI = new ZX81EmulatorUI('emulator_canvas','emulator_status','keyboard');
+  emulatorUI = new ZX81EmulatorUI('emulator_canvas','emulator_status');
   }
 window.onunload = function()
   {
@@ -33,10 +33,6 @@ It appears your browser does not support the canvas element so no emulator is av
 </SECTION>
 
 <SECTION class="emulator_buttons">
-<button id="scale_button" onclick="emulatorUI.resizeCanvas()">Larger display</button>
-<button disabled id="down_button" onclick="emulatorUI.changeSpeed(-1)">Slow down</button>
-<span id="speed_text">100%</span>
-<button id="up_button" onclick="emulatorUI.changeSpeed(+1)">Speed up</button>
 <span id="emulator_status">&nbsp;</span>
 </SECTION>
 
