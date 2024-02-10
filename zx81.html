@@ -11,7 +11,7 @@
 var emulatorUI;
 window.onload = function()
   {
-  emulatorUI = new ZX81EmulatorUI('emulator_canvas','emulator_status');
+  emulatorUI = new ZX81EmulatorUI('emulator_canvas','emulator_status','keyboard');
   }
 window.onunload = function()
   {
@@ -40,12 +40,6 @@ It appears your browser does not support the canvas element so no emulator is av
 <span id="emulator_status">&nbsp;</span>
 </SECTION>
 
-<SECTION class="emulator_load">
-<select id="initial_select" onchange="emulatorUI.initialSelected()"></select>
-<select id="name_select" onchange="emulatorUI.nameSelected()"></select>
-<select id="track_select"></select>
-<button id="load_button" onclick="emulatorUI.loadTrack()">Load</button>
-</SECTION>
 <A HREF="index.html">Home</A>
 </BODY>
 </HTML>
