@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<TITLE>ZX81 Emulator</TITLE>
+<LINK REL="icon" HREF="./favicon.ico" TYPE="image/x-icon">
+</HEAD>
+<BODY>
+<script>
+window.onerror = function(msg,url,line)
+  {
+  alert('Error: '+msg+' line: '+line+' script:'+url)
+  }
+</script>
+<script src="/zx81/jtyone_min.js"></script>
+<script>
+var emulatorUI;
+window.onload = function()
+  {
+  emulatorUI = new ZX81EmulatorUI('initial_select','name_select','track_select',
+                                  'emulator_canvas','emulator_status',
+                                  'down_button','up_button','speed_text','scale_button',
+                                  'load_button','keyboard');
+  }
+window.onunload = function()
+  {
+  emulatorUI.stop();
+  }
+</script>
+
+<SECTION class="emulator_wrapper">
+<canvas id="emulator_canvas">
+It appears your browser does not support the canvas element so no emulator is available.
+</canvas>
+</SECTION>
+
+<SECTION class="keyboard_wrapper">
+<IMG id="keyboard" src="keyboard640.png">
+<IMG height=0 id="keyboard_normal" src="keyboard640.png">
+<IMG height=0 id="keyboard_shift" src="keyboard640_shift.png">
+<IMG height=0 id="keyboard_shiftlock" src="keyboard640_shiftlock.png">
+</SECTION>
+
+<SECTION class="emulator_buttons">
+<button id="scale_button" onclick="emulatorUI.resizeCanvas()">Larger display</button>
+<button disabled id="down_button" onclick="emulatorUI.changeSpeed(-1)">Slow down</button>
+<span id="speed_text">100%</span>
+<button id="up_button" onclick="emulatorUI.changeSpeed(+1)">Speed up</button>
+<span id="emulator_status">&nbsp;</span>
+</SECTION>
+
+<SECTION class="emulator_load">
+<select id="initial_select" onchange="emulatorUI.initialSelected()"></select>
+<select id="name_select" onchange="emulatorUI.nameSelected()"></select>
+<select id="track_select"></select>
+<button id="load_button" onclick="emulatorUI.loadTrack()">Load</button>
+</SECTION>
+
+<A HREF="index.html">Home</A>
+</BODY>
+</HTML>
