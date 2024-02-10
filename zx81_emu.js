@@ -1,4 +1,4 @@
-function ZX81EmulatorUI(r, i, y) {
+function ZX81EmulatorUI(r, i) {
     function B(t) {
         return 0 == t.length ? "" : t[0] > "9" ? t[0].toLowerCase() : "0"
     }
