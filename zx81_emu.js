@@ -3329,7 +3329,7 @@ var zx81opts = {
         chrgen: 0,
         enableqschrgen: !1,
         maxireg: 32,
-        rom: "roms/zx81x2.rom"
+        rom: "zx81-javascript-emulator/roms/zx81x2.rom"
     },
     ZX81_TO_ASCII = ' !!!!!!!!!!"£$:?()><=+-*/;,.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
     tape = {
