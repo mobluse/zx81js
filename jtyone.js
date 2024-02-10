@@ -33,7 +33,7 @@ function ZX81EmulatorUI(t, e, n, r, i, o, a, c, u, f, y) {
         I = document.getElementById(e),
         P = document.getElementById(n),
         z = document.getElementById(r),
-        E = document.getElementById(i),
+        E = statusLabel = document.getElementById(i),
         L = document.getElementById(o),
         M = document.getElementById(a),
         U = document.getElementById(c),
