@@ -8,7 +8,7 @@ function ZX81EmulatorUI(r, i) {
     }
     for (var w, v = "", l = "", g = 0, p = screen.width < 750 ? 1 : 2, m = 4, A = !1, x = "", k = [20, 33, 50, 66, 100, 200, 500, 750, 1e3], S = decodeURIComponent(window.location.search.substring(1)), b = S.split("&"), C = 0; C < b.length; C++) {
         var N = b[C].split("=");
-        "id" == N[0] ? v = "/tapes/" + N[1] + ".tzx": "track" == N[0] ? (l = N[1], v = "/" != l[0] ? "/zx81/generated/packages/" + B(l) + "/" + l : l) : "tzx" == N[0] ? (l = N[1], "/" == l[1] ? (v = "/zx81/generated/packages/" + l, l = l.substr(2)) : v = l) : "scale" == N[0] ? p = parseInt(N[1]) : "speed" == N[0] ? m = parseInt(N[1]) : "zx80" == N[0] ? A = !0 : "hires" == N[0] && (x = N[1])
+        "id" == N[0] ? v = "tapes/" + N[1] + ".tzx": "track" == N[0] ? (l = N[1], v = "/" != l[0] ? "/zx81/generated/packages/" + B(l) + "/" + l : l) : "tzx" == N[0] ? (l = N[1], "/" == l[1] ? (v = "/zx81/generated/packages/" + l, l = l.substr(2)) : v = l) : "scale" == N[0] ? p = parseInt(N[1]) : "speed" == N[0] ? m = parseInt(N[1]) : "zx80" == N[0] ? A = !0 : "hires" == N[0] && (x = N[1])
     }
     var z = document.getElementById(r),
         E = document.getElementById(i);
