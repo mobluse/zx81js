@@ -4275,7 +4275,7 @@ function ZX81(t, e, n, r) {
 function FileToLoad(t, e, n, r) {
     (this.loadedLen = 0), (this.fileName = t.replace("\\", "/"));
     var i = new XMLHttpRequest();
-    i.open("GET", "/zx81/" + this.fileName, !0), (i.responseType = "arraybuffer");
+    i.open("GET", "roms/" + this.fileName, !0), (i.responseType = "arraybuffer");
     var o = this;
     (i.onreadystatechange = function () {
         if (4 === this.readyState && 200 === this.status) {
