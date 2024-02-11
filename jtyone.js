@@ -78,7 +78,7 @@ function ZX81EmulatorUI(t, e, n, r, i, o, a, c, u, f, y) {
         (D.onreadystatechange = function () {
             4 === this.readyState && 200 === this.status ? ((w = JSON.parse(D.responseText)), _this.initTrackSelections()) : 4 === this.readyState && 404 === this.status && console.log("Failed to download tracklist.json");
         }),
-        D.open("GET", "/zx81/generated/tracklist.json", !0),
+        D.open("GET", "generated/tracklist.json", !0),
         D.send(),
         z.focus(),
         (this.stop = function () {
