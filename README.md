@@ -7,7 +7,7 @@ Between 2003 and 2006, Mike Wynne wrote a C# emulator, `eightyOne` for the Sincl
 ![The ZX81](https://github.com/hammingweight/zx81-javascript-emulator/blob/master/zx81.jpg)
 
 ## Why this [fork](https://github.com/hammingweight/zx81-javascript-emulator)?
-Holdsworth's code is quite tightly coupled to the layout of his (excellent) [website](http://www.zx81stuff.org.uk/). For people who want to run a single program, the library is daunting to use. This fork is intended to make it easier to run single ZX81 programs (which must be in TZX format.) This fork now supports to run from a subdirectory. It uses the [ZX81X2.ROM version C](https://sinclairzxworld.com/viewtopic.php?p=40327#p40327).
+Holdsworth's code is quite tightly coupled to the layout of his (excellent) [website](http://www.zx81stuff.org.uk/). For people who want to run a single program, the library is daunting to use. This fork is intended to make it easier to run single ZX81 programs (which must be in TZX format.) This fork now supports to run from a subdirectory. It uses the [ZX81X2.ROM version C](https://sinclairzxworld.com/viewtopic.php?p=40327#p40327) by Zsolt.
 
 ## "Show me some running code"
 To see the code in action, clone this repo and run
