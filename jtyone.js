@@ -4263,7 +4263,7 @@ function ZX81(t, e, n, r) {
                 if (n.length > 0) {
                     var a = n[0];
                     a > "0" && "9" >= a && (a = "0");
-                    var c = ("pfiles/" + a + "/" + n + ".p").toLowerCase();
+                    var c = ("../pfiles/" + a + "/" + n + ".p").toLowerCase();
                     return (o = new FileToLoad(c, w, 16393, 65536)), p.setPC(848), !0;
                 }
             } else if (546 == t && 62 == w[t]) {
