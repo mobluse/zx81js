@@ -18,9 +18,9 @@ function ZX81EmulatorUI(t, e, n, r, i, o, a, c, u, f, y) {
     ) {
         var N = b[C].split("=");
         "track" == N[0]
-            ? ((l = N[1]), (v = "/" != l[0] ? "/zx81/generated/packages/" + B(l) + "/" + l : l))
+            ? ((l = N[1]), (v = "/" != l[0] ? "generated/packages/" + B(l) + "/" + l : l))
             : "tzx" == N[0]
-            ? ((l = N[1]), "/" == l[1] ? ((v = "/zx81/generated/packages/" + l), (l = l.substr(2))) : (v = l))
+            ? ((l = N[1]), "/" == l[1] ? ((v = "generated/packages/" + l), (l = l.substr(2))) : (v = l))
             : "scale" == N[0]
             ? (p = parseInt(N[1]))
             : "speed" == N[0]
@@ -4944,8 +4944,8 @@ function ZX81Keyboard() {
                 },
             });
     })(this);
-var zx81opts = { machine: 1, protectROM: !0, RAMTOP: 32767, ROMTOP: 8191, truehires: 0, chrgen: 0, enableqschrgen: !1, maxireg: 32, rom: "zx81.rom" },
-    ZX81_TO_ASCII = ' !!!!!!!!!!"Â£$:?()><=+-*/;,.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+var zx81opts = { machine: 1, protectROM: !0, RAMTOP: 32767, ROMTOP: 8191, truehires: 0, chrgen: 0, enableqschrgen: !1, maxireg: 32, rom: "zx81x2.rom" },
+    ZX81_TO_ASCII = ' !!!!!!!!!!"£$:?()><=+-*/;,.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
     tape = {
         numPrograms: 0,
         currentProgram: -1,
