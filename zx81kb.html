@@ -5,15 +5,15 @@
 <TITLE>ZX81 Emulator</TITLE>
 <LINK REL="icon" HREF="./favicon.ico" TYPE="image/x-icon">
 </HEAD>
-<BODY>
-<script>
+<BODY STYLE="background-color: #121212;">
+<SCRIPT>
 window.onerror = function(msg,url,line)
   {
   alert('Error: '+msg+' line: '+line+' script:'+url)
   }
-</script>
-<script src="./jtyone.js"></script>
-<script>
+</SCRIPT>
+<SCRIPT SRC="./jtyone.js"></SCRIPT>
+<SCRIPT>
 var emulatorUI;
 window.onload = function()
   {
@@ -26,12 +26,12 @@ window.onunload = function()
   {
   emulatorUI.stop();
   }
-</script>
+</SCRIPT>
 
 <SECTION class="emulator_wrapper">
-<canvas id="emulator_canvas">
+<CANVAS ID="emulator_canvas">
 It appears your browser does not support the canvas element so no emulator is available.
-</canvas>
+</CANVAS>
 </SECTION>
 
 <SECTION class="keyboard_wrapper">
