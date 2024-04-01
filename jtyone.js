@@ -4944,7 +4944,7 @@ function ZX81Keyboard() {
                 },
             });
     })(this);
-var zx81opts = { machine: 1, protectROM: !0, RAMTOP: 32767, ROMTOP: 8191, truehires: 0, chrgen: 0, enableqschrgen: !1, maxireg: 32, rom: "zx81.rom" },
+var zx81opts = { machine: 1, protectROM: !0, RAMTOP: 32767, ROMTOP: 8191, truehires: 0, chrgen: 0, enableqschrgen: !1, maxireg: 32, rom: "zx81x2.rom" },
     ZX81_TO_ASCII = ' !!!!!!!!!!"£$:?()><=+-*/;,.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
     tape = {
         numPrograms: 0,
