@@ -1,0 +1,6 @@
+Sea Mines (hi-res)
+POKE 16389,103
+NEW
+LOAD "SEA-MINES"
+
+Unfortunately, Sea Mines doesn't work in Zed Ex 0.98 for Android.
