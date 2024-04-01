@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <HTML>
 <HEAD>
-<meta charset="UTF-8">
+<META CHARSET="UTF-8">
 <TITLE>ZX81 Emulator</TITLE>
 <LINK REL="icon" HREF="./favicon.ico" TYPE="image/x-icon">
+<STYLE>
+  body {background-color: #121212;}
+  a:link {color: white;}
+  a:visited {color: lightgray;}
+  span {color: white;}
+</STYLE>
 </HEAD>
-<BODY STYLE="background-color: #121212;">
+<BODY>
 <SCRIPT>
 window.onerror = function(msg,url,line)
   {
@@ -44,9 +50,9 @@ It appears your browser does not support the canvas element so no emulator is av
 <SECTION class="emulator_buttons">
 <button id="scale_button" onclick="emulatorUI.resizeCanvas()">Larger display</button>
 <button disabled id="down_button" onclick="emulatorUI.changeSpeed(-1)">Slow down</button>
-<span id="speed_text" style="color: white;">100%</span>
+<span id="speed_text">100%</span>
 <button id="up_button" onclick="emulatorUI.changeSpeed(+1)">Speed up</button>
-<span id="emulator_status" style="color: white;">&nbsp;</span>
+<span id="emulator_status">&nbsp;</span>
 </SECTION>
 
 <SECTION class="emulator_load">
@@ -58,6 +64,6 @@ It appears your browser does not support the canvas element so no emulator is av
 
 <BR>
 <BR>
-<A HREF="index.html"  style="color: white;">Home</A>
+<A HREF="index.html">Home</A>
 </BODY>
 </HTML>
