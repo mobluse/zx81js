@@ -36,9 +36,12 @@ Looking at the [./](./) and [tapes](./tapes) folders should give you a good idea
 The `P` file format is another common format for ZX81 programs. To convert use the following example in e.g. Debian GNU/Linux 12 (bookworm) aarch64. For Windows a working executable already exists. 
 ```
 cd
-git clone https://github.com/salvacam/zx81putil
+git clone https://github.com/mcleod-ideafix/zx81putil
 cd zx81putil/
-make
+gcc -Wall -O2 zx81putil.c -o zx81putil -lm
 cd ~/Downloads/
 ~/zx81putil/zx81putil aritm-zx81.p -tzx
 ```
+
+## Create .tzx.zip.hex files for generated/packages
+Use zx81putil, zip, and xxd. Study the zx81stuff web site and this for examples of tracklist.json.
