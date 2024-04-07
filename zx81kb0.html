@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<META CHARSET="UTF-8">
+<TITLE>ZX81 Emulator 0</TITLE>
+<LINK REL="icon" HREF="./favicon.ico" TYPE="image/x-icon">
+<STYLE>
+  body {background-color: #121212;}
+  a:link {color: lightgray;}
+  a:visited {color: gray;}
+  span {color: lightgray;}
+</STYLE>
+</HEAD>
+<BODY>
+<SCRIPT>
+window.onerror = function(msg,url,line)
+  {
+  alert('Error: '+msg+' line: '+line+' script:'+url)
+  }
+</SCRIPT>
+<SCRIPT SRC="./jtyone0.js"></SCRIPT>
+<SCRIPT>
+var emulatorUI;
+window.onload = function()
+  {
+  emulatorUI = new ZX81EmulatorUI('initial_select','name_select','track_select',
+                                  'emulator_canvas','emulator_status',
+                                  'down_button','up_button','speed_text','scale_button',
+                                  'load_button','keyboard');
+  }
+window.onunload = function()
+  {
+  emulatorUI.stop();
+  }
+</SCRIPT>
+
+<SECTION class="emulator_wrapper">
+<CANVAS ID="emulator_canvas">
+It appears your browser does not support the canvas element so no emulator is available.
+</CANVAS>
+</SECTION>
+
+<SECTION class="keyboard_wrapper">
+<IMG id="keyboard" src="keyboard640.png">
+<IMG height=0 id="keyboard_normal" src="keyboard640.png">
+<IMG height=0 id="keyboard_shift" src="keyboard640_shift.png">
+<IMG height=0 id="keyboard_shiftlock" src="keyboard640_shiftlock.png">
+</SECTION>
+
+<SECTION class="emulator_buttons">
+<button id="scale_button" onclick="emulatorUI.resizeCanvas()">Larger display</button>
+<button disabled id="down_button" onclick="emulatorUI.changeSpeed(-1)">Slow down</button>
+<span id="speed_text">100%</span>
+<button id="up_button" onclick="emulatorUI.changeSpeed(+1)">Speed up</button>
+<span id="emulator_status">&nbsp;</span>
+</SECTION>
+
+<SECTION class="emulator_load">
+<select id="initial_select" onchange="emulatorUI.initialSelected()"></select>
+<select id="name_select" onchange="emulatorUI.nameSelected()"></select>
+<select id="track_select"></select>
+<button id="load_button" onclick="emulatorUI.loadTrack()">Load</button>
+</SECTION>
+
+<BR>
+<BR>
+<A HREF="index.html">Home</A>
+<BR>
+<BR>
+<span>
+ARITM
+ASM
+BETTA-BASIC
+BINDEC
+BUGBURST
+BYE-TONI
+CAMEL
+CHASE
+CYCLE
+DEEPSPACE
+ED-LABYRINT
+ELORGEL
+FACTOR
+FACTOR2
+FOUR-IN-A-ROW
+GLOSA
+GUESS-IT
+HEXLD2
+HEXLDCHS
+INSTR
+LSD-CALC
+MATHS
+MIRAGE
+MOVAVG
+MULTIPLES
+PACMAN
+PINBAT
+POLYDIV
+POLYDIV1K
+PROGAID
+RANDBARCHART
+RANDRECT
+REGISTER
+SALESCHART
+SEA-MINES
+SHORT-CIRCUIT
+SIFFERJAKT
+SIN-X
+SKY
+SMALLDFILE
+SQRSPIRAL
+STORTEXT
+SURVIVOR
+TERNARY
+THE-MINE
+TOOLKIT
+TRADE
+VALVALVAL2
+VARS
+VR
+WINDOW-81
+</span>
+</BODY>
+</HTML>
